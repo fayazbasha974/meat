@@ -9,7 +9,7 @@ module.exports = {
     env_production: {
       NODE_ENV: 'production',
       LOG_LEVEL: 'error',
-      PUBLIC_SERVER_URL: 'https://admin.tryion.shop',
+      PUBLIC_SERVER_URL: 'https://meateatr.herokuapp.com/',
       PARSE_SERVER_MOUNT: '/api',
       PARSE_VERIFY_USER_EMAILS: true,
       APP_NAME: 'IonShop',
@@ -27,7 +27,7 @@ module.exports = {
       MAILGUN_DOMAIN: 'mg.quanlabs.com',
       MAILGUN_FROM_ADDRESS: 'QuanLabs <noreply@quanlabs.com>',
       MAILGUN_HOST: 'api.mailgun.net',
-      MAILGUN_PUBLIC_LINK: 'https://www.tryion.shop',
+      MAILGUN_PUBLIC_LINK: 'https://meateatr.herokuapp.com/',
       MAX_REQUEST_SIZE: '20mb',
       DOKKU_LETSENCRYPT_EMAIL: 'dev@quanlabs.com',
       PARSE_DASHBOARD_USER: 'admin',
@@ -46,7 +46,7 @@ module.exports = {
       NODE_ENV: 'production',
       APP_ID: 'JrWy7sUKLL',
       MASTER_KEY: 'MASTER_KEY',
-      PUBLIC_SERVER_URL: 'https://admin.tryion.shop',
+      PUBLIC_SERVER_URL: 'https://meateatr.herokuapp.com/',
       PARSE_SERVER_MOUNT: '/api',
     }
   }]
