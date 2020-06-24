@@ -2,6 +2,9 @@ module.exports = {
   apps: [{
     name: 'server',
     script: './server.js',
+    scripts: {
+      start: "node server.js"
+    },
     instances: 1,
     autorestart: true,
     watch: false,
