@@ -12,11 +12,11 @@ module.exports = {
       PUBLIC_SERVER_URL: 'https://meateatr.herokuapp.com/',
       PARSE_SERVER_MOUNT: '/api',
       PARSE_VERIFY_USER_EMAILS: true,
-      APP_NAME: 'IonShop',
-      APP_ID: 'JrWy7sUKLL',
-      MASTER_KEY: 'MASTER_KEY',
-      READ_ONLY_MASTER_KEY: 'READ_ONLY_MASTER_KEY',
-      CURRENCY: 'USD',
+      APP_NAME: 'Meat Eatr',
+      APP_ID: 'YkEDFRpeXy',
+      MASTER_KEY: 'vdfk86HprA',
+      READ_ONLY_MASTER_KEY: 'I94aMeHNJQ',
+      CURRENCY: 'INR',
       CURRENCY_LOCALE: 'en-US',
       CURRENCY_DISPLAY: 'code',
       CUSTOM_LANG: 'en',
@@ -31,9 +31,9 @@ module.exports = {
       MAX_REQUEST_SIZE: '20mb',
       DOKKU_LETSENCRYPT_EMAIL: 'dev@quanlabs.com',
       PARSE_DASHBOARD_USER: 'admin',
-      PARSE_DASHBOARD_PASS: '$2y$12$OdE5BzhWx/LLIA7f9fF14e7cpQb3KCkCQK1GFcYE5oQz/Zr/lzazS',
+      PARSE_DASHBOARD_PASS: '$2y$12$iVSpQJw0uaohKKfIPxYZWeOTGRmVQiYqpAGGFNVUpeL4HNZTttY4C',
       PARSE_DASHBOARD_USER_READ_ONLY: 'admin1',
-      PARSE_DASHBOARD_PASS_READ_ONLY: '$2y$12$vjyiyBKNVvnxoPNH7MGfqen67OVJYnDgFFjrdBiXQsEYl1irf5NJe'
+      PARSE_DASHBOARD_PASS_READ_ONLY: '$2y$12$lXMemR1O009ix5YApYfuLuqfujl2TQkKkcP9f2Urs3VAbT/qoH2FS'
     }
   }, {
     name: 'worker',
@@ -44,8 +44,8 @@ module.exports = {
     max_memory_restart: '1G',
     env_production: {
       NODE_ENV: 'production',
-      APP_ID: 'JrWy7sUKLL',
-      MASTER_KEY: 'MASTER_KEY',
+      APP_ID: 'YkEDFRpeXy',
+      MASTER_KEY: 'vdfk86HprA',
       PUBLIC_SERVER_URL: 'https://meateatr.herokuapp.com/',
       PARSE_SERVER_MOUNT: '/api',
     }
