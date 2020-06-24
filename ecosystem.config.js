@@ -9,7 +9,7 @@ module.exports = {
     env_production: {
       NODE_ENV: 'production',
       LOG_LEVEL: 'error',
-      PUBLIC_SERVER_URL: 'https://meateatr.herokuapp.com/',
+      PUBLIC_SERVER_URL: 'https://meateatr.herokuapp.com',
       PARSE_SERVER_MOUNT: '/api',
       PARSE_VERIFY_USER_EMAILS: true,
       APP_NAME: 'Meat Eatr',
