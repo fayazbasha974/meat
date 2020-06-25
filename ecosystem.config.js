@@ -46,7 +46,7 @@ module.exports = {
       NODE_ENV: 'production',
       APP_ID: 'YkEDFRpeXy',
       MASTER_KEY: 'vdfk86HprA',
-      PUBLIC_SERVER_URL: 'https://meateatr.herokuapp.com//',
+      PUBLIC_SERVER_URL: 'https://meateatr.herokuapp.com/',
       PARSE_SERVER_MOUNT: '/api',
     }
   }]
