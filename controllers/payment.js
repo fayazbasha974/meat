@@ -30,9 +30,9 @@ router.post('/', (req, res) => {
 });
 
 router.post("/success", function (req, res) {
-
-    const redirectUrl = "http://localhost:8100/1/cart/checkout/thanks/123";
-    res.redirect(redirectUrl);
+    res.json({done: 'done'});
+    // const redirectUrl = "http://localhost:8100/1/cart/checkout/thanks/123";
+    // res.redirect(redirectUrl);
 });
 
 router.post("/failure", function (req, res) {
