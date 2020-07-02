@@ -14,8 +14,8 @@ router.post('/', (req, res) => {
         amount: 300,
         productinfo: 'productinfo',
         txnid: Math.floor(100000 + Math.random() * 900000),
-        surl: 'https://meateatr.herokuapp.com/success',
-        furl: 'https://meateatr.herokuapp.com/failure',
+        surl: 'https://meateatr.herokuapp.com/payment/success',
+        furl: 'https://meateatr.herokuapp.com/payment/failure',
     }
 
     payUMoney.pay(pay, (error, response) => {
