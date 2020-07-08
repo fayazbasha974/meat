@@ -199,5 +199,6 @@
   "WELCOME": "Welcome",
   "CUSTOMERS": "Customers",
   "CART_EXPIRATION": "Cart expiration (hours)",
-  "NO_LINK": "No Link"
+  "NO_LINK": "No Link",
+  "MOBILE": "Mobile Number"
 }

@@ -37,6 +37,9 @@
           <md-icon></md-icon>{{ 'EMAIL' | translate }}
           </th>
           <th md-column class="text-center text-uppercase bold" md-order-by="createdAt">
+            <md-icon></md-icon>{{ 'MOBILE' | translate }}
+            </th>
+          <th md-column class="text-center text-uppercase bold" md-order-by="createdAt">
           <md-icon></md-icon>{{ 'CREATED_AT' | translate }}
           </th>
           <th md-column></th>
@@ -52,7 +55,7 @@
           </td>
           <td md-cell class="text-center">{{:: user.username }}</td>
           <td md-cell class="text-center">{{:: user.email }}</td>
-          <td md-cell class="text-center">{{:: user.mobile }}</td>
+          <td md-cell class="text-center">{{ user.mobile }}</td>
           <td md-cell class="text-center">{{ user.createdAt | date:'mediumDate' }}</td>
           <td md-cell>
            <section layout="row" layout-align="center center">

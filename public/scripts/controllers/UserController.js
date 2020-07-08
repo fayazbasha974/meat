@@ -16,6 +16,7 @@ angular.module('main')
     var loadUsers = function() {
       Auth.ensureLoggedIn().then(function () {
         $scope.promise = User.all($scope.query).then(function (data) {
+          console.log('users', data.users);
           $scope.users = data.users;
           $scope.query.total = data.total;
           $scope.$apply();
