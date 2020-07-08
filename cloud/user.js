@@ -55,6 +55,7 @@ Parse.Cloud.define('createUser', async (req) => {
   }
 
   user1.set('password', params.password)
+  user1.set('mobile', params.mobile);
 
   if (params.photo) {
     user1.set('photo', params.photo)
