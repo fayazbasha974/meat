@@ -17,7 +17,9 @@ angular.module('main').factory('User', function () {
     },
 
     all: function (params) {
-      return Parse.Cloud.run('getUsers', params);
+      const temp = Parse.Cloud.run('getUsers', params);
+      console.log('temp', temp);
+      return temp;
     },
 
     save: function (obj) {
