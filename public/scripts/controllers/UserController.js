@@ -16,7 +16,39 @@ angular.module('main')
     var loadUsers = function() {
       Auth.ensureLoggedIn().then(function () {
         $scope.promise = User.all($scope.query).then(function (data) {
-          $scope.users = data.users;
+          // $scope.users = data.users;
+          $scope.users = {
+            "result": {
+              "users": [
+                {
+                  "name": "test 2",
+                  "username": "test2",
+                  "email": "test2@gm.com",
+                  "mobile": "9999999999",
+                  "status": "Active",
+                  "type": "customer",
+                  "canonical": "test 2 test2 test2@gm.com",
+                  "_email_verify_token": "eyZfbIkHJxDFz6uMy2J4lzJGU",
+                  "emailVerified": false,
+                  "_email_verify_token_expires_at": "2020-07-08T14:12:22.046Z",
+                  "createdAt": "2020-07-08T12:12:21.905Z",
+                  "updatedAt": "2020-07-08T12:12:21.905Z",
+                  "ACL": {
+                    "*": {
+                      "read": true
+                    },
+                    "ROyS8o0V5U": {
+                      "read": true,
+                      "write": true
+                    }
+                  },
+                  "objectId": "ROyS8o0V5U",
+                  "__type": "Object",
+                  "className": "_User"
+                }
+              ]
+            }
+          }
           $scope.query.total = data.total;
           $scope.$apply();
         });
