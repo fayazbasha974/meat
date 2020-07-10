@@ -33,6 +33,7 @@ Parse.Cloud.define('getUsers', async (req) => {
   const results = await Promise.all([query1.find({ useMasterKey: true }), query1.count()])
 
   return {
+    temp: 'temp',
     users: results[0],
     total: results[1]
   }
