@@ -108,14 +108,14 @@ Parse.Cloud.beforeSave('Order', async (req) => {
 
         const stripeInstance = stripe(stripeConfig.secretKey)
 
-        let chargeDescription = stripeConfig.chargeDescription
-        chargeDescription = chargeDescription.replace('%CUSTOMER_NAME%', user.get('name'))
-        chargeDescription = chargeDescription.replace('%ORDER_NUMBER%', orderNo)
+        // let chargeDescription = stripeConfig.chargeDescription
+        // chargeDescription = chargeDescription.replace('%CUSTOMER_NAME%', user.get('name'))
+        // chargeDescription = chargeDescription.replace('%ORDER_NUMBER%', orderNo)
 
         const charge = await stripeInstance.charges.create({
           amount: Math.round(total * 100),
           currency: stripeConfig.currency,
-          description: chargeDescription,
+          description: 'chargeDescription',
           customer: user.get('stripeCustomerId'),
           capture: true,
           source: card.get('cardId')
