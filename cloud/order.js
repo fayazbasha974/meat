@@ -91,41 +91,41 @@ Parse.Cloud.beforeSave('Order', async (req) => {
       obj.set('shippingFee', shippingFee)
       obj.set('total', total)
 
-      // if (attrs.paymentMethod === 'Card') {
+      if (attrs.paymentMethod === 'Card') {
 
-      //   const card = attrs.card
+        const card = attrs.card
 
-      //   await card.fetch({
-      //     useMasterKey: true
-      //   })
+        await card.fetch({
+          useMasterKey: true
+        })
 
-      //   const queryConfig = new Parse.Query('AppConfig')
-      //   const config = await queryConfig.first({
-      //     useMasterKey: true
-      //   })
+        const queryConfig = new Parse.Query('AppConfig')
+        const config = await queryConfig.first({
+          useMasterKey: true
+        })
 
-      //   const stripeConfig = config.get('stripe')
+        const stripeConfig = config.get('stripe')
 
-      //   const stripeInstance = stripe(stripeConfig.secretKey)
+        const stripeInstance = stripe(stripeConfig.secretKey)
 
-      //   let chargeDescription = stripeConfig.chargeDescription
-      //   chargeDescription = chargeDescription.replace('%CUSTOMER_NAME%', user.get('name'))
-      //   chargeDescription = chargeDescription.replace('%ORDER_NUMBER%', orderNo)
+        let chargeDescription = stripeConfig.chargeDescription
+        chargeDescription = chargeDescription.replace('%CUSTOMER_NAME%', user.get('name'))
+        chargeDescription = chargeDescription.replace('%ORDER_NUMBER%', orderNo)
 
-      //   const charge = await stripeInstance.charges.create({
-      //     amount: Math.round(total * 100),
-      //     currency: stripeConfig.currency,
-      //     description: chargeDescription,
-      //     customer: user.get('stripeCustomerId'),
-      //     capture: true,
-      //     source: card.get('cardId')
-      //   })
+        const charge = await stripeInstance.charges.create({
+          amount: Math.round(total * 100),
+          currency: stripeConfig.currency,
+          description: chargeDescription,
+          customer: user.get('stripeCustomerId'),
+          capture: true,
+          source: card.get('cardId')
+        })
 
-      //   obj.set('card', card.toJSON())
-      //   obj.set('status', 'Paid')
-      //   obj.set('charge', charge)
+        obj.set('card', card.toJSON())
+        obj.set('status', 'Paid')
+        obj.set('charge', charge)
 
-      // }
+      }
 
     }
 
