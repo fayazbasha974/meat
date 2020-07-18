@@ -93,11 +93,11 @@ Parse.Cloud.beforeSave('Order', async (req) => {
 
       if (attrs.paymentMethod === 'Card') {
 
-        const card = attrs.card
+        // const card = attrs.card
 
-        await card.fetch({
-          useMasterKey: true
-        })
+        // await card.fetch({
+        //   useMasterKey: true
+        // })
 
         const queryConfig = new Parse.Query('AppConfig')
         const config = await queryConfig.first({
@@ -121,10 +121,11 @@ Parse.Cloud.beforeSave('Order', async (req) => {
           // description: 'chargeDescription',
           customer: user.get('stripeCustomerId'),
           capture: true,
-          source: card.get('cardId')
+          // source: card.get('cardId')
+          source: 'card_1H6Jr6K9gASkBWTguW2lWmej'
         })
 
-        obj.set('card', card.toJSON())
+        // obj.set('card', card.toJSON())
         obj.set('status', 'Paid')
         obj.set('charge', charge)
 
