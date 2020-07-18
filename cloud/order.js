@@ -104,9 +104,10 @@ Parse.Cloud.beforeSave('Order', async (req) => {
           useMasterKey: true
         })
 
-        const stripeConfig = config.get('stripe')
+        // const stripeConfig = config.get('stripe')
 
-        const stripeInstance = stripe(stripeConfig.secretKey)
+        // const stripeInstance = stripe(stripeConfig.secretKey)
+        const stripeInstance = stripe('sk_test_51H4xh2K9gASkBWTgLYA2mdatSXhrzqdqPHRJOVjuZe9PphH6W9BqUZL8kt6IXGRzT6PnCXBQH5rMQtnMmBYLy44v00TtMGEdk6')
 
         // let chargeDescription = stripeConfig.chargeDescription
         // chargeDescription = chargeDescription.replace('%CUSTOMER_NAME%', user.get('name'))
@@ -114,7 +115,9 @@ Parse.Cloud.beforeSave('Order', async (req) => {
 
         const charge = await stripeInstance.charges.create({
           amount: Math.round(total * 100),
-          currency: stripeConfig.currency,
+          // currency: stripeConfig.currency,
+          // description: chargeDescription,
+          currency: 'INR',
           description: 'chargeDescription',
           customer: user.get('stripeCustomerId'),
           capture: true,
